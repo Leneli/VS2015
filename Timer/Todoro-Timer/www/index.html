@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -12,39 +12,66 @@
         <title>TodoroTimer</title>
     </head>
     <body>
-
         
-        <div class="todoro-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <div id="popup" class="">
+            <div id="message"></div>
+            
+            <div>
+                <button class="mdl-button mdl-js-button mdl-button--accent">Ok</button>
+                <button class="mdl-button mdl-js-button mdl-button--primary">Cancel</button>
+            </div>
+        </div>
+
+        <div class="todoro-layout mdl-layout mdl-layout--fixed-header mdl-js-layout">
             <header class="todoro-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
                 <div class="mdl-layout__header-row">
                     <span class="mdl-layout-title">Todoro</span>
 
                     <!-- Right aligned menu below button -->
-                    <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-                        <i class="material-icons"></i>
+                    <button id="menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                        <i class="material-icons">more_vert</i>
                     </button>
 
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                        for="demo-menu-lower-right">
-                        <li class="mdl-menu__item"><a href="#">Timer</a></li>
-                        <li class="mdl-menu__item"><a href="#">To-do list</a></li>
+                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-right">
+                        <li class="mdl-menu__item"><a class="menu_a" href="#timer">Timer</a></li>
+                        <li class="mdl-menu__item"><a class="menu_a" href="#todolist">To-do list</a></li>
                     </ul>
                 </div>
             </header>
 
-            <div class="todoro-ribbon"></div> <!--Colored layout-->
-
             <main class="todoro-main mdl-layout__content">
                 <div class="todoro-container mdl-grid">
-                    <div class="todoro-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-                        <h3>How to install MDL</h3>
-                        <p>Cillum dolor esse sit incididunt velit eiusmod magna ad nostrud officia aute dolor dolor. Magna esse ullamco pariatur adipisicing consectetur eu commodo officia. Ex cillum consequat mollit minim elit est deserunt occaecat nisi amet. Quis aliqua nostrud Lorem occaecat sunt. Eiusmod quis amet ullamco aliquip dolore ut incididunt duis adipisicing. Elit consequat nisi eiusmod aute ipsum sunt veniam do est. Occaecat mollit aliquip ut proident consectetur amet ex dolore consectetur aliqua elit.</p>
+
+                    <!--Timer-->
+                    <div id="timer" class="todoro-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                        <h3>Pomodoro timer</h3>
+                        
+                        <div class="time mdl-shadow--4dp">
+                            <button id="play-timer" class="mdl-js-button mdl-button--raised">
+                                <i class="material-icons">play_circle_outline<!--loop--></i>
+                            </button>
+
+                            <div><span id="minute">25</span></div>
+                            <div>:</div>
+                            <div><span id="second">00</span></div>
+                        </div>                        
+
+                        <!--<div class="mdl-card__actions mdl-card--border">
+                            <button class="mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect">Add TO-DO</button>
+                        </div>-->
                     </div>
 
-                    <div class="todoro-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-                        <h3>How to install MDL</h3>
-                        <p>Cillum dolor esse sit incididunt velit eiusmod magna ad nostrud officia aute dolor dolor. Magna esse ullamco pariatur adipisicing consectetur eu commodo officia. Ex cillum consequat mollit minim elit est deserunt occaecat nisi amet. Quis aliqua nostrud Lorem occaecat sunt. Eiusmod quis amet ullamco aliquip dolore ut incididunt duis adipisicing. Elit consequat nisi eiusmod aute ipsum sunt veniam do est. Occaecat mollit aliquip ut proident consectetur amet ex dolore consectetur aliqua elit.</p>
-                    </div>
+                    <!--To-do list-->
+                    <!--<div id="todolist" class="todoro-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                        <h3>To-Do list</h3>
+                        <p>Item 1 ...</p>
+                        <p>Item 2 ...</p>
+                        <p>Item 3 ...</p>
+
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>-->
                     
                 </div>
             </main>
@@ -54,7 +81,8 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script src="scripts/material.min.js"></script>
+        <script type="text/javascript" src="scripts/material.min.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/pomodoro.js"></script>
     </body>
 </html>
