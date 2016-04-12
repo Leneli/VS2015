@@ -106,12 +106,6 @@
     <AppxPackagedFile Include="C:\Users\elenak\Documents\GIT\VS2015\Timer\Todoro-Timer\platforms\windows\www\images\bg.jpg">
       <PackagePath>www\images\bg.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\elenak\Documents\GIT\VS2015\Timer\Todoro-Timer\platforms\windows\www\images\ic_dehaze_white_24px.svg">
-      <PackagePath>www\images\ic_dehaze_white_24px.svg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\elenak\Documents\GIT\VS2015\Timer\Todoro-Timer\platforms\windows\www\images\ic_more_vert_white_24px.svg">
-      <PackagePath>www\images\ic_more_vert_white_24px.svg</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\elenak\Documents\GIT\VS2015\Timer\Todoro-Timer\platforms\windows\www\index.html">
       <PackagePath>www\index.html</PackagePath>
     </AppxPackagedFile>

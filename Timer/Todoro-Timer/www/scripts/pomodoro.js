@@ -4,8 +4,8 @@ var play = document.getElementById('play-timer'),
     popup = document.getElementById('popup'),
     message = document.getElementById('message'),
     addTime,
-    timeWork = 5000, //25m = 1500000
-	timeCoffee = 3000, //5m = 300000
+    timeWork = 1500000, //25m = 1500000
+	timeCoffee = 300000, //5m = 300000
     messageWork = "<i class='material-icons'>work</i> It's time to work!",
     messageCoffee = "<i class='material-icons'>free_breakfast</i> Coffee break!",
     intervalID,
