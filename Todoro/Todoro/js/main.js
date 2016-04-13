@@ -13,11 +13,9 @@
       args.setPromise(WinJS.UI.processAll().then(function() {
           // TODO: место для кода.
 
-
-
           // AppBar
           var AppBar = new WinJS.UI.AppBar();
-
+          console.log(AppBar);
 
       }));
     }

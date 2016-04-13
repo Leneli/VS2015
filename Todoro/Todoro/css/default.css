@@ -1,7 +1,10 @@
-﻿/*.win-container {
+﻿.win-container {
     display: flex;
-    flex-direction: column;
-}*/
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100vh - 85px - 55px);
+}
 
 .win-h1 {
     background-color: orangered;
@@ -13,15 +16,13 @@
     position: relative;
     border: 15px solid #fff;
     border-radius: 50%;
-    margin: auto;
-    margin-top: 10vh;
     width: 300px;
     height: 300px;
     overflow: hidden;
 }
 
 .pomodoro-background {
-    background-color: orangered;
+    background-color: orangered; /*в обратную сторону - greenyellow ???*/
     height: 100%;
     width: 15%;
 }
@@ -46,6 +47,20 @@
 
 
 
-@media handheld and (max-width: 719px) { /*для смартфонов, протестировать!*/
-    .time {color: greenyellow;}
+@media screen and (max-width: 359px) { /*для смартфонов*/
+    #todoro-timer {
+        border-radius: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-height: 480px) { /*если окно слишком маленькте по высоте*/
+    #todoro-timer {
+        border-radius: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
 }
