@@ -14,8 +14,19 @@
           // TODO: место для кода.
 
           // AppBar
-          var AppBar = new WinJS.UI.AppBar();
-          console.log(AppBar);
+          var AppBar = new WinJS.UI.AppBar(),
+              toPlay = document.querySelector('#play'),
+              toStop = document.querySelector('#stop'),
+              settings = document.querySelector('#settings'),
+              about = document.querySelector('#about'),
+              contact = document.querySelector('#contact');
+
+          toPlay.addEventListener('click', PlayTimer);
+          toStop.addEventListener('click', cancelTimer);
+          
+          //var TEST = document.getElementById('TEST');
+          //TEST.innerText = toPlay;
+          
 
       }));
     }
