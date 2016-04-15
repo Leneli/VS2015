@@ -13,19 +13,11 @@
       args.setPromise(WinJS.UI.processAll().then(function() {
           // TODO: место для кода.
 
-          // AppBar
-          var AppBar = new WinJS.UI.AppBar(),
-              toPlay = document.querySelector('#play'),
-              toStop = document.querySelector('#stop'),
-              settings = document.querySelector('#settings'),
-              about = document.querySelector('#about'),
-              contact = document.querySelector('#contact');
+          //SplitView
+          var my_SplitView = new WinJS.UI.SplitView();
 
-          toPlay.addEventListener('click', PlayTimer);
-          toStop.addEventListener('click', cancelTimer);
-          
-          //var TEST = document.getElementById('TEST');
-          //TEST.innerText = toPlay;
+          //AppBar
+          var my_AppBar = new WinJS.UI.AppBar();
           
 
       }));

@@ -4,68 +4,121 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <title>Todoro</title>
-    <link href="lib/winjs-4.0.1/css/ui-dark.css" rel="stylesheet" />
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
     <script src="lib/winjs-4.0.1/js/base.js"></script>
     <script src="lib/winjs-4.0.1/js/ui.js"></script>
     <link href="css/default.css" rel="stylesheet" />
     <script src="js/main.js"></script>
 </head>
-<body class="win-type-body">
 
-    <h1 class="win-h1">Todoro</h1>
 
-    <div class="win-container">        
+<body class="win-type-body red">
+
+    <!-- Content area -->
+    <div class="win-container">
+
+        <h1 class="win-h1">Todoro</h1>
 
         <!--Timer-->
-        <div id="todoro-timer">
-            <div id="pomodoro-background" class="">
-
-                <div class="time">
-                    <div><span id="minute">25</span></div>
-                    <div>:</div>
-                    <div><span id="second">00</span></div>
-                </div>
-
-            </div>
+        <div id="todoro-timer" class="time">
+            <div><span id="minute">25</span>m</div>
+            <div><span id="second">00</span>s</div>
         </div>
         <!--END Timer-->
 
-        <div id="TEST"></div>
+    </div><!-- END Content area -->
 
-    </div>
 
 
     <!-- AppBar -->
     <div class="win-appbar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
-        <!--play--><button data-win-control="WinJS.UI.AppBarCommand"
-                           data-win-options="{
-                                    id: 'play',
-                                    label:'Play',
-                                    icon:'play'}"></button>
-        <!--stop--><button data-win-control="WinJS.UI.AppBarCommand"
-                           data-win-options="{
-                                    id: 'stop',
-                                    label:'Stop',
-                                    icon:'stop'}"></button>
-        <hr data-win-control="WinJS.UI.Command" data-win-options="{type:'separator'}" />
-        <!--settings--><button data-win-control="WinJS.UI.AppBarCommand"
-                               data-win-options="{
-                                    id: 'settings',
-                                    label:'Settings',
-                                    icon:'settings'}"></button>
-        <!--About--><button data-win-control="WinJS.UI.AppBarCommand"
-                            data-win-options="{
-                                    id: 'about',
-                                    label:'About',
-                                    section:'secondary'}"></button>
-        <!--Contact--><button data-win-control="WinJS.UI.AppBarCommand"
-                              data-win-options="{
-                                    id: 'contact',
-                                    label:'Contact',
-                                    section:'secondary'}"></button>
+
+        <!--play-->
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                    id: 'play',
+                    type: 'button',
+                    label:'Play',
+                    icon:'play',
+                    section:'primary'}"></button>
+
+
+        <!--stop-->
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                    id: 'stop',
+                    type: 'button',
+                    label:'Stop',
+                    icon:'stop',
+                    section:'primary'}"></button>
+
+
+        <hr data-win-control="WinJS.UI.Command" data-win-options="{type:'separator', section:'primary'}" />
+        
+        <!--settings-->
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                    id: 'settings',
+                    type: 'flyout',
+                    flyout: select('#flyout_settings'),
+                    label:'Settings',
+                    icon:'settings',
+                    section:'primary'}"></button>
+        
+        
+        <!-- ... -->
+
+
+        <!--About-->
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                    id: 'about',
+                    type: 'flyout',
+                    flyout: select('#flyout_about'),
+                    label:'About',
+                    section:'secondary'}"></button>
+
+        <!--Contact-->
+        <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                    id: 'contacts',
+                    type: 'flyout',
+                    flyout: select('#flyout_contacts'),
+                    label:'Contacts',
+                    section:'secondary'}"></button>
+
+
+        
+    </div><!-- END AppBar -->
+
+
+    <!-- FLYOUTs -->
+
+
+    <!-- SETTINGS -->
+    <div id="flyout_settings" class="win-flyout" data-win-control="WinJS.UI.Flyout">
+        <h3>Time:</h3>
+        <input type="number" />
+
+        <br />
+
+        <h3>Theme:</h3>
+        <select>
+            <option>Red theme</option>
+            <option>Green theme</option>
+            <option>Blue theme</option>
+        </select>
+
+        <button>Ok</button> <button>Cancel</button>
     </div>
 
-    <script src="js/timer.js"></script>
-    <script src="js/appbar.js"></script>
+    <!-- ABOUT -->
+    <div id="flyout_about" class="win-flyout" data-win-control="WinJS.UI.Flyout">ABOUT</div>
+
+    <!-- CONTACTS -->
+    <div id="flyout_contacts" class="win-flyout" data-win-control="WinJS.UI.Flyout">CONTACTS</div>
+    
+
+    <!--<script src="js/timer.js"></script>-->
 </body>
 </html>

@@ -5,7 +5,7 @@
 	timeCoffee = 300000, //  5m = 300000
     timePrevent = 180000, // 3m = 180000
     bgWidth = 0, // width for background
-    intervalID,
+    intervalID;
     i = 0; //счетчик кликов по таймеру
 
 
