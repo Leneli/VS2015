@@ -82,3 +82,12 @@ body {
 #second {
     font-size: 3em;
 }
+
+.settings-button {
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+select#themes {
+    width: 100%;
+}

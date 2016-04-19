@@ -29,6 +29,12 @@
     </div><!-- END Content area -->
 
 
+    <!-- Flyout -->
+    <div id="popup" class="win-flyout" data-win-control="WinJS.UI.Flyout">
+        <div class="win-textbox">ВРЕМЯ ПОЧТИ ВЫШЛО!!!</div>
+    </div>
+
+
 
     <!-- AppBar -->
     <div class="win-appbar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
@@ -97,19 +103,46 @@
 
     <!-- SETTINGS -->
     <div id="flyout_settings" class="win-flyout" data-win-control="WinJS.UI.Flyout">
-        <h3>Time:</h3>
-        <input type="number" />
+        <h3>Time for:</h3>
+
+        <div>
+            Work: <select id="work-time" class="win-timepicker-minute win-dropdown">
+
+                      <option value="2">2</option> <!--test-->
+
+                    <option value="20">20</option>
+                    <option value="25" selected>25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+            </select> minutes
+        </div>
+
+        <div>
+            Break: <select id="break-time" class="win-timepicker-minute win-dropdown">
+
+                       <option value="1">1</option> <!--test-->
+
+                    <option value="3">3</option>
+                    <option value="5" selected>5</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+            </select> minutes
+        </div>
 
         <br />
 
         <h3>Theme:</h3>
-        <select>
-            <option>Red theme</option>
-            <option>Green theme</option>
-            <option>Blue theme</option>
+        <select id="themes" class="win-dropdown">
+            <option value="red">Red theme</option>
+            <option value="green">Green theme</option>
+            <option value="blue">Blue theme</option>
         </select>
 
-        <button>Ok</button> <button>Cancel</button>
+        <div class="settings-button">
+            <button id="settings_ok" class="win-button">Ok</button>
+        </div>        
     </div>
 
     <!-- ABOUT -->
@@ -119,6 +152,7 @@
     <div id="flyout_contacts" class="win-flyout" data-win-control="WinJS.UI.Flyout">CONTACTS</div>
     
 
-    <!--<script src="js/timer.js"></script>-->
+    <script src="js/settings.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 </html>

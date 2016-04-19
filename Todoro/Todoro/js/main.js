@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
   'use strict';
   var app = WinJS.Application;
   var activation = Windows.ApplicationModel.Activation;
@@ -13,12 +13,27 @@
       args.setPromise(WinJS.UI.processAll().then(function() {
           // TODO: место для кода.
 
-          //SplitView
-          var my_SplitView = new WinJS.UI.SplitView();
-
           //AppBar
-          var my_AppBar = new WinJS.UI.AppBar();
-          
+            var my_AppBar = new WinJS.UI.AppBar(),
+                  play = document.querySelector('#play'),
+                  stop = document.querySelector('#stop'),
+                  settings = document.querySelector('#settings'),
+                  settings_ok = document.querySelector('#settings_ok');
+
+            settings_ok.addEventListener('click', UpdateSettings);
+
+            play.addEventListener('click', function () {
+                play.disabled = true;
+                settings.disabled = true;
+                PlayTimer();
+            });
+
+            stop.addEventListener('click', function () {
+                play.disabled = false;
+                settings.disabled = false;
+                clearInterval(intervalID);
+                PrintTime(timeWork);
+            });
 
       }));
     }

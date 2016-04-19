@@ -59,6 +59,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="audio\ring.mp3" />
     <Content Include="index.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
     <Content Include="images\SplashScreen.scale-200.png" />
@@ -69,11 +70,13 @@
     <Content Include="images\Wide310x150Logo.scale-200.png" />
     <Content Include="js\main.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\settings.js" />
     <Content Include="js\timer.js" />
     <Content Include="lib\winjs-4.0.1\js\base.js" />
     <Content Include="lib\winjs-4.0.1\js\ui.js" />
     <Content Include="lib\winjs-4.0.1\css\ui-light.css" />
     <Content Include="lib\winjs-4.0.1\css\ui-dark.css" />
+    <Content Include="popup.html" />
     <None Include="Todoro_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />

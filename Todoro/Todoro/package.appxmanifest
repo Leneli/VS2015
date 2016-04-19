@@ -15,13 +15,13 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="index.html">
-      <uap:VisualElements DisplayName="Todoro timer" Description="Timer for &quot;Pomodoro&quot; technic" BackgroundColor="orangeRed" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+      <uap:VisualElements DisplayName="Todoro timer" Description="Timer for &quot;Pomodoro&quot; technic" BackgroundColor="#f35a4a" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="Todoro">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="wide310x150Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
-        <uap:SplashScreen Image="images\splashscreen.png" BackgroundColor="orangeRed" />
+        <uap:SplashScreen Image="images\splashscreen.png" BackgroundColor="#f35a4a" />
       </uap:VisualElements>
     </Application>
   </Applications>
