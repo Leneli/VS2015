@@ -25,7 +25,7 @@
             play.addEventListener('click', function () {
                 play.disabled = true;
                 settings.disabled = true;
-                PlayTimer();
+                PlayTimer(timeWork);
             });
 
             stop.addEventListener('click', function () {

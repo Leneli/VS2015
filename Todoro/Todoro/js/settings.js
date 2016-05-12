@@ -1,8 +1,11 @@
-﻿var body = document.body,
+﻿'use strict';
+
+var body = document.body,
     flyout_settings = document.querySelector('#flyout_settings'),
     themes = document.querySelector('#themes'),
     work = document.querySelector('#work-time'),
     coffee = document.querySelector('#break-time'),
+    text = document.querySelector('#text'),
     timeWork = 1500000,  //25
 	timeCoffee = 300000; //5
 

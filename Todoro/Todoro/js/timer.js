@@ -1,77 +1,40 @@
-﻿var minute = document.querySelector('#minute'),
+﻿'use strict';
+
+var minute = document.querySelector('#minute'),
     second = document.querySelector('#second'),
-    timePrevent = 60000, // 1m = 60000
+    timePrevent = 60000, //1m = 60000, устанавливает, за сколько минут до конца "помидора" предупредить пользователя, что скоро перерыв
     popup = false,
+    i = 1,
     intervalID;
 
 
-function PlayTimer() { //таймер запущен
-    
-    PrintTime(timeWork);
+function PlayTimer(t) { //таймер запущен
 
-    
+    PrintTime(t);
 
-    var t = timeWork;
     intervalID = setInterval(function () {
         t -= 1000;
         PrintTime(t);
-
-        //if (t === timePrevent) { //за минуту до конца отсчета - предупреждение 
-        //  alert('START!');  ?????????????????????? окно должно появиться в правом нижнем углу экрана поверх всех окон и исчезнуть секунд через 5
-        //}
 
         if (t < 1000) {
             clearInterval(intervalID);
             AddAudio();
 
-
-
-
-
-
-            function cancelCommand_Click() {
-                // Create the message dialog and set its content
-                var msg = new Windows.UI.Popups.MessageDialog(
-                    "No internet connection has been found.");
-
-                // Add commands and set their command handlers
-                msg.commands.append(new Windows.UI.Popups.UICommand(
-                    "Try again",
-                    commandInvokedHandler));
-                msg.commands.append(
-                    new Windows.UI.Popups.UICommand("Close", commandInvokedHandler));
-
-                // Set the command that will be invoked by default
-                msg.defaultCommandIndex = 0;
-
-                // Set the command to be invoked when escape is pressed
-                msg.cancelCommandIndex = 1;
-
-                // Show the message dialog
-                msg.showAsync();
+            if (i % 2 !== 0) {
+                text.innerText = 'It is necessary to take a break :)';
+                PlayTimer(timeCoffee);
+                i++;
+            } else {
+                text.innerText = 'Need to work!';
+                PlayTimer(timeWork);
+                i++;
             }
-
-            cancelCommand_Click();
-
-            function commandInvokedHandler(command) {
-                // Display message
-                WinJS.log && WinJS.log("The '" + command.label + "' command has been selected.",
-                "sample", "status");
-            }
-
-
-
-
-
-
-
-
-
-        };
+            
+        }
 
     }, 1000);
-};
 
+};
 
 
 
